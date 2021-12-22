@@ -1,10 +1,3 @@
-//
-//  HeyQiitaTests.swift
-//  HeyQiitaTests
-//
-//  Created by 行木 太一 on 2021/12/23.
-//
-
 import XCTest
 @testable import HeyQiita
 

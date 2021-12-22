@@ -1,10 +1,3 @@
-//
-//  HeyQiitaUITests.swift
-//  HeyQiitaUITests
-//
-//  Created by 行木 太一 on 2021/12/23.
-//
-
 import XCTest
 
 class HeyQiitaUITests: XCTestCase {
