@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8793CF312773778E00A8AB81 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8793CF302773778E00A8AB81 /* README.md */; };
 		87B8B711277376000060A5FC /* HeyQiitaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B8B710277376000060A5FC /* HeyQiitaApp.swift */; };
 		87B8B713277376000060A5FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B8B712277376000060A5FC /* ContentView.swift */; };
 		87B8B715277376020060A5FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87B8B714277376020060A5FC /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8793CF302773778E00A8AB81 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		87B8B70D277376000060A5FC /* HeyQiita.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeyQiita.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B8B710277376000060A5FC /* HeyQiitaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyQiitaApp.swift; sourceTree = "<group>"; };
 		87B8B712277376000060A5FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,12 +73,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8793CF2F2773777B00A8AB81 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				8793CF302773778E00A8AB81 /* README.md */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 		87B8B704277376000060A5FC = {
 			isa = PBXGroup;
 			children = (
 				87B8B70F277376000060A5FC /* HeyQiita */,
 				87B8B720277376020060A5FC /* HeyQiitaTests */,
 				87B8B72A277376020060A5FC /* HeyQiitaUITests */,
+				8793CF2F2773777B00A8AB81 /* Settings */,
 				87B8B70E277376000060A5FC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -231,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8793CF312773778E00A8AB81 /* README.md in Resources */,
 				87B8B718277376020060A5FC /* Preview Assets.xcassets in Resources */,
 				87B8B715277376020060A5FC /* Assets.xcassets in Resources */,
 			);
