@@ -48,6 +48,36 @@
                ReferencedContainer = "container:HeyQiita.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "875C8EF42774BE99008F4FA5"
+               BuildableName = "HeyQiitaCoreTests.xctest"
+               BlueprintName = "HeyQiitaCoreTests"
+               ReferencedContainer = "container:HeyQiita.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "875C8F1C2774C1FB008F4FA5"
+               BuildableName = "HeyQiitaNetworkTests.xctest"
+               BlueprintName = "HeyQiitaNetworkTests"
+               ReferencedContainer = "container:HeyQiita.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "875C8F472774C416008F4FA5"
+               BuildableName = "HeyQiitaEnvironmentTests.xctest"
+               BlueprintName = "HeyQiitaEnvironmentTests"
+               ReferencedContainer = "container:HeyQiita.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
