@@ -13,8 +13,13 @@ struct LoginView: View {
   }
 }
 
+#if DEBUG || STUB
 struct LoginView_Previews: PreviewProvider {
   static var previews: some View {
-    LoginView()
+    Group {
+      LoginView().preferredColorScheme(.dark)
+      LoginView().preferredColorScheme(.light)
+    }
   }
 }
+#endif

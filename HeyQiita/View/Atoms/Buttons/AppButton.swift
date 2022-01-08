@@ -34,13 +34,16 @@ struct AppButton: View {
   }
 }
 
+#if DEBUG || STUB
 struct AppButton_Previews: PreviewProvider {
+  static let view: some View = AppButton(title: "Button", action: {})
+    .previewLayout(.fixed(width: 390, height: 100))
+
   static var previews: some View {
     Group {
-      AppButton(title: "Button", fontSize: 20, action: {})
-        .previewLayout(.fixed(width: 390, height: 100))
-      AppButton(title: "Long Length Button", fontSize: 20, action: {})
-        .previewLayout(.fixed(width: 390, height: 100))
+      view.preferredColorScheme(.dark)
+      view.preferredColorScheme(.light)
     }
   }
 }
+#endif
