@@ -23,13 +23,16 @@ struct TextButton: View {
   }
 }
 
+#if DEBUG || STUB
 struct TextButton_Previews: PreviewProvider {
+  static let view: some View = TextButton(title: "Button", action: {})
+    .previewLayout(.fixed(width: 390, height: 100))
+
   static var previews: some View {
     Group {
-      TextButton(title: "Button", action: {})
-        .previewLayout(.fixed(width: 390, height: 100))
-      TextButton(title: "Button", fontSize: 40, action: {})
-        .previewLayout(.fixed(width: 390, height: 100))
+      view.preferredColorScheme(.dark)
+      view.preferredColorScheme(.light)
     }
   }
 }
+#endif
