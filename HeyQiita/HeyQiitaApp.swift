@@ -4,7 +4,7 @@ import SwiftUI
 struct HeyQiitaApp: App {
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      LoginView()
     }
   }
 }
