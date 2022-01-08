@@ -228,6 +228,37 @@
 			path = HeyQiitaNetworkTests;
 			sourceTree = "<group>";
 		};
+		87836E5D2789DDEB00842C00 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				87836E5E2789DE6000842C00 /* Atoms */,
+				87836E602789DEA300842C00 /* Templates */,
+				87836E612789DEC100842C00 /* Pages */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		87836E5E2789DE6000842C00 /* Atoms */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Atoms;
+			sourceTree = "<group>";
+		};
+		87836E602789DEA300842C00 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		87836E612789DEC100842C00 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
 		878832552774C78E00B7FBDB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				87B8B710277376000060A5FC /* HeyQiitaApp.swift */,
+				87836E5D2789DDEB00842C00 /* View */,
 				87B8B712277376000060A5FC /* ContentView.swift */,
 				87B8B714277376020060A5FC /* Assets.xcassets */,
 				87B8B716277376020060A5FC /* Preview Content */,
