@@ -17,6 +17,7 @@
 		875C8F1E2774C1FB008F4FA5 /* HeyQiitaNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875C8F142774C1FB008F4FA5 /* HeyQiitaNetwork.framework */; };
 		875C8F252774C1FB008F4FA5 /* HeyQiitaNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C8F242774C1FB008F4FA5 /* HeyQiitaNetworkTests.swift */; };
 		875C8F262774C1FB008F4FA5 /* HeyQiitaNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 875C8F162774C1FB008F4FA5 /* HeyQiitaNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87836E652789E1FB00842C00 /* AppLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87836E642789E1FB00842C00 /* AppLogo.swift */; };
 		878832562774C78E00B7FBDB /* HeyQiitaNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875C8F142774C1FB008F4FA5 /* HeyQiitaNetwork.framework */; };
 		878832572774C78E00B7FBDB /* HeyQiitaNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 875C8F142774C1FB008F4FA5 /* HeyQiitaNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8793CF312773778E00A8AB81 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8793CF302773778E00A8AB81 /* README.md */; };
@@ -124,6 +125,7 @@
 		875C8F172774C1FB008F4FA5 /* HeyQiitaNetwork.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = HeyQiitaNetwork.docc; sourceTree = "<group>"; };
 		875C8F1D2774C1FB008F4FA5 /* HeyQiitaNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeyQiitaNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		875C8F242774C1FB008F4FA5 /* HeyQiitaNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyQiitaNetworkTests.swift; sourceTree = "<group>"; };
+		87836E642789E1FB00842C00 /* AppLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogo.swift; sourceTree = "<group>"; };
 		8793CF302773778E00A8AB81 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		87B8B70D277376000060A5FC /* HeyQiita.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeyQiita.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B8B710277376000060A5FC /* HeyQiitaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyQiitaApp.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 		87836E5E2789DE6000842C00 /* Atoms */ = {
 			isa = PBXGroup;
 			children = (
+				87836E642789E1FB00842C00 /* AppLogo.swift */,
 			);
 			path = Atoms;
 			sourceTree = "<group>";
@@ -649,6 +652,7 @@
 			files = (
 				87B8B713277376000060A5FC /* ContentView.swift in Sources */,
 				87B8B711277376000060A5FC /* HeyQiitaApp.swift in Sources */,
+				87836E652789E1FB00842C00 /* AppLogo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
