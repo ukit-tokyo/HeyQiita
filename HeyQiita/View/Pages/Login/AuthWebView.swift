@@ -6,8 +6,10 @@ struct AuthWebView: View {
   }
 }
 
+#if DEBUG || STUB
 struct AuthWebView_Previews: PreviewProvider {
   static var previews: some View {
     AuthWebView()
   }
 }
+#endif

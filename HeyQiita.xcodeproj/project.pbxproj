@@ -35,6 +35,7 @@
 		B6BDEB39279846F9005B883E /* AuthWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDEB38279846F9005B883E /* AuthWebView.swift */; };
 		B6BDEB3D27984748005B883E /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDEB3C27984748005B883E /* WebView.swift */; };
 		B6BDEB3F27984773005B883E /* WebViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDEB3E27984773005B883E /* WebViewContainer.swift */; };
+		B6BDEB43279848C5005B883E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDEB42279848C5005B883E /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +152,7 @@
 		B6BDEB38279846F9005B883E /* AuthWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWebView.swift; sourceTree = "<group>"; };
 		B6BDEB3C27984748005B883E /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		B6BDEB3E27984773005B883E /* WebViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewContainer.swift; sourceTree = "<group>"; };
+		B6BDEB42279848C5005B883E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 		875C8EED2774BE99008F4FA5 /* HeyQiitaCore */ = {
 			isa = PBXGroup;
 			children = (
+				B6BDEB4027984898005B883E /* ViewModels */,
 				875C8EEE2774BE99008F4FA5 /* HeyQiitaCore.h */,
 				875C8EEF2774BE99008F4FA5 /* HeyQiitaCore.docc */,
 			);
@@ -403,6 +406,22 @@
 				B6BDEB3E27984773005B883E /* WebViewContainer.swift */,
 			);
 			path = WebView;
+			sourceTree = "<group>";
+		};
+		B6BDEB4027984898005B883E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B6BDEB41279848AB005B883E /* Login */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B6BDEB41279848AB005B883E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B6BDEB42279848C5005B883E /* LoginViewModel.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -679,6 +698,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6BDEB43279848C5005B883E /* LoginViewModel.swift in Sources */,
 				875C8EF02774BE99008F4FA5 /* HeyQiitaCore.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -877,6 +897,7 @@
 		875C8F072774BE99008F4FA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -898,6 +919,7 @@
 		875C8F082774BE99008F4FA5 /* Stub */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -919,6 +941,7 @@
 		875C8F092774BE99008F4FA5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1152,6 +1175,7 @@
 		8793CF33277377E500A8AB81 /* Stub */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -1343,6 +1367,7 @@
 		87B8B732277376020060A5FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -1371,6 +1396,7 @@
 		87B8B733277376020060A5FC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
