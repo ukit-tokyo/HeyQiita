@@ -3,9 +3,15 @@ import SwiftUI
 /// 共通 WebView
 struct WebView: UIViewRepresentable {
   let url: URL
+  let willLoad: ((URL) -> (Bool))?
+
+  init(url: URL, willLoad: ((URL) -> (Bool))? = nil) {
+    self.url = url
+    self.willLoad = willLoad
+  }
 
   func makeUIView(context: Context) -> WebViewContainer {
-    WebViewContainer(url: url)
+    WebViewContainer(url: url, willLoad: willLoad)
   }
 
   func updateUIView(_ uiView: WebViewContainer, context: Context) {

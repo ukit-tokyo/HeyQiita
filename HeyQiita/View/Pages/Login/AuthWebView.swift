@@ -5,7 +5,12 @@ struct AuthWebView: View {
   @ObservedObject var viewModel = AuthWebViewModel()
 
   var body: some View {
-    WebView(url: viewModel.authURL)
+    WebView(
+      url: viewModel.authURL,
+      willLoad: { url in
+        print("testing...", url)
+        return viewModel.hookAuthCodeFromTargetURL(url: url)
+      })
   }
 }
 

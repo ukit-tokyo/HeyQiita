@@ -1,10 +1,15 @@
 import WebKit
 
 /// WKWebView
-class WebViewContainer: WKWebView {
+final class WebViewContainer: WKWebView {
+  /// Webリクエスト毎直前にコール
+  /// - return: リクエストをキャンセルする場合は true
+  private let willLoad: ((URL) -> (Bool))?
 
-  init(url: URL) {
+  init(url: URL, willLoad: ((URL) -> (Bool))? = nil) {
+    self.willLoad = willLoad
     super.init(frame: .zero, configuration: WKWebViewConfiguration())
+
     navigationDelegate = self
     load(URLRequest(url: url))
   }
@@ -20,6 +25,13 @@ extension WebViewContainer: WKNavigationDelegate {
     decidePolicyFor navigationAction: WKNavigationAction,
     decisionHandler: @escaping (WKNavigationActionPolicy) -> Void
   ) {
+    if let url = navigationAction.request.url {
+      let shouldLoadCancel = willLoad?(url) ?? false
+      if shouldLoadCancel {
+        decisionHandler(.cancel)
+        return
+      }
+    }
     decisionHandler(.allow)
   }
 }
