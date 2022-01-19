@@ -40,6 +40,7 @@
 		B6BDEB4827984D01005B883E /* AuthWebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDEB4727984D01005B883E /* AuthWebViewModel.swift */; };
 		B6BDEB4B27984D2C005B883E /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDEB4A27984D2C005B883E /* URLs.swift */; };
 		B6E20C80279860FA00C0BA0F /* ArticleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E20C7F279860FA00C0BA0F /* ArticleRequest.swift */; };
+		B6E20C83279869AC00C0BA0F /* AccessTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E20C82279869AC00C0BA0F /* AccessTokenRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +164,7 @@
 		B6BDEB4727984D01005B883E /* AuthWebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWebViewModel.swift; sourceTree = "<group>"; };
 		B6BDEB4A27984D2C005B883E /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		B6E20C7F279860FA00C0BA0F /* ArticleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRequest.swift; sourceTree = "<group>"; };
+		B6E20C82279869AC00C0BA0F /* AccessTokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -407,6 +409,7 @@
 		B6BBE3682798522300A18398 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				B6E20C812798697A00C0BA0F /* AccessToken */,
 				B6E20C7E279860E100C0BA0F /* Article */,
 				B6BBE3692798523800A18398 /* RequestProtocol.swift */,
 			);
@@ -486,6 +489,14 @@
 				B6E20C7F279860FA00C0BA0F /* ArticleRequest.swift */,
 			);
 			path = Article;
+			sourceTree = "<group>";
+		};
+		B6E20C812798697A00C0BA0F /* AccessToken */ = {
+			isa = PBXGroup;
+			children = (
+				B6E20C82279869AC00C0BA0F /* AccessTokenRequest.swift */,
+			);
+			path = AccessToken;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -783,6 +794,7 @@
 				B6BBE36D279852E700A18398 /* Session.swift in Sources */,
 				B6BBE36A2798523800A18398 /* RequestProtocol.swift in Sources */,
 				875C8F182774C1FB008F4FA5 /* HeyQiitaNetwork.docc in Sources */,
+				B6E20C83279869AC00C0BA0F /* AccessTokenRequest.swift in Sources */,
 				B6BDEB4B27984D2C005B883E /* URLs.swift in Sources */,
 				B6E20C80279860FA00C0BA0F /* ArticleRequest.swift in Sources */,
 			);

@@ -1,13 +1,18 @@
 import HeyQiitaNetwork
+import Combine
 
 public class AuthWebViewModel: ObservableObject {
+  private var cancellables: Set<AnyCancellable> = []
+
   public let authURL: URL
+  private let clientID: String
 
   public init() {
     guard let clientID = Bundle.main.object(forInfoDictionaryKey: "CLIENT_ID") as? String else {
       fatalError("CLIENT_ID was not found.")
     }
-    authURL = URL.authURL
+    self.clientID = clientID
+    self.authURL = URL.authURL
       .addQueries([
         URLQueryItem(name: "client_id", value: clientID),
         URLQueryItem(name: "scope", value: "read_qiita+write_qiita")
@@ -20,7 +25,34 @@ public class AuthWebViewModel: ObservableObject {
   public func hookAuthCodeFromTargetURL(url: URL) -> Bool {
     guard url.host == URL.redirectURL.host,
           let code = url.getQuery(name: "code") else { return false }
-    print("testing...", code)
+    getAccessToken(with: code)
     return true
+  }
+
+  /// アクセストークン取得
+  public func getAccessToken(with code: String) {
+    guard let clientSecret = Bundle.main.object(forInfoDictionaryKey: "CLIENT_SECRET") as? String else {
+      fatalError("CLIENT_SECRET was not found.")
+    }
+    let parameter = AccessTokenRequest.Parameter(
+      clientID: clientID,
+      clientSecret: clientSecret,
+      code: code
+    )
+    Session.shared.send(AccessTokenRequest(parameter))
+      .sink(
+        receiveCompletion: { result in
+          switch result {
+          case .finished:
+            print("finished")
+          case .failure(let error):
+            print(error)
+          }
+        },
+        receiveValue: { value in
+          print(value.token)
+        }
+      )
+      .store(in: &cancellables)
   }
 }

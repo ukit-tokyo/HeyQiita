@@ -16,6 +16,7 @@ public struct Session {
     return URLSession.shared.dataTaskPublisher(for: req)
       .receive(on: DispatchQueue.main)
       .tryMap { (data, response) in
+        print(String(data: data, encoding: .utf8))
         // TODO: エラーハンドリング
         return data
       }
@@ -41,7 +42,7 @@ extension Session {
     case .post, .put, .patch, .delete:
       // GET 以外の場合はボディにパラメータを付与
       req = URLRequest(url: request.url)
-      req.httpBody = request.parameters?.toStringValue.toQueryString.data(using: .utf8)
+      req.httpBody = try? JSONSerialization.data(withJSONObject: request.parameters ?? [:])
     }
 
     // - HTTPメソッドを確定
@@ -75,19 +76,6 @@ private extension Dictionary where Key == String, Value == Any {
       }
 
       return result
-    }
-  }
-}
-
-private extension Dictionary where Key == String, Value == String {
-  /// クエリ文字列へ変換
-  var toQueryString: String {
-    return enumerated().reduce("") { (result, tuple) in
-      return result
-        + tuple.element.key
-        + "="
-        + tuple.element.value
-        + (count - 1 > tuple.offset ? "&" : "")
     }
   }
 }
