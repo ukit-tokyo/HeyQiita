@@ -41,6 +41,7 @@
 		B6BDEB4B27984D2C005B883E /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDEB4A27984D2C005B883E /* URLs.swift */; };
 		B6E20C80279860FA00C0BA0F /* ArticleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E20C7F279860FA00C0BA0F /* ArticleRequest.swift */; };
 		B6E20C83279869AC00C0BA0F /* AccessTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E20C82279869AC00C0BA0F /* AccessTokenRequest.swift */; };
+		B6E20C8B27987DAF00C0BA0F /* Publisher+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E20C8A27987DAF00C0BA0F /* Publisher+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +166,7 @@
 		B6BDEB4A27984D2C005B883E /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		B6E20C7F279860FA00C0BA0F /* ArticleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRequest.swift; sourceTree = "<group>"; };
 		B6E20C82279869AC00C0BA0F /* AccessTokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenRequest.swift; sourceTree = "<group>"; };
+		B6E20C8A27987DAF00C0BA0F /* Publisher+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				B6BDEB4027984898005B883E /* ViewModels */,
+				B6E20C8827987D8100C0BA0F /* Extensions */,
 				875C8EEE2774BE99008F4FA5 /* HeyQiitaCore.h */,
 				875C8EEF2774BE99008F4FA5 /* HeyQiitaCore.docc */,
 			);
@@ -497,6 +500,22 @@
 				B6E20C82279869AC00C0BA0F /* AccessTokenRequest.swift */,
 			);
 			path = AccessToken;
+			sourceTree = "<group>";
+		};
+		B6E20C8827987D8100C0BA0F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B6E20C8927987D9000C0BA0F /* Publisher */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B6E20C8927987D9000C0BA0F /* Publisher */ = {
+			isa = PBXGroup;
+			children = (
+				B6E20C8A27987DAF00C0BA0F /* Publisher+.swift */,
+			);
+			path = Publisher;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -773,6 +792,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6E20C8B27987DAF00C0BA0F /* Publisher+.swift in Sources */,
 				B6BDEB43279848C5005B883E /* LoginViewModel.swift in Sources */,
 				B6BDEB4827984D01005B883E /* AuthWebViewModel.swift in Sources */,
 				875C8EF02774BE99008F4FA5 /* HeyQiitaCore.docc in Sources */,

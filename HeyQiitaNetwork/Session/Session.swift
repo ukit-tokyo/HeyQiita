@@ -72,7 +72,7 @@ private extension Dictionary where Key == String, Value == Any {
       case let float as Float: result[param.key] = String(float)
       case let bool as Bool: result[param.key] = String(bool)
       /* 必要になったら追加定義 */
-      default: break
+      default: fatalError("↑ダウンキャスト定義を追加してー")
       }
 
       return result

@@ -41,16 +41,11 @@ public class AuthWebViewModel: ObservableObject {
     )
     Session.shared.send(AccessTokenRequest(parameter))
       .sink(
-        receiveCompletion: { result in
-          switch result {
-          case .finished:
-            print("finished")
-          case .failure(let error):
-            print(error)
-          }
-        },
-        receiveValue: { value in
+        onReceivedValue: { value in
           print(value.token)
+        },
+        onFailure: { error in
+          print(error)
         }
       )
       .store(in: &cancellables)
