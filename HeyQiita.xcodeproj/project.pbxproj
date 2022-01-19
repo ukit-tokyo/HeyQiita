@@ -42,6 +42,9 @@
 		B6E20C80279860FA00C0BA0F /* ArticleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E20C7F279860FA00C0BA0F /* ArticleRequest.swift */; };
 		B6E20C83279869AC00C0BA0F /* AccessTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E20C82279869AC00C0BA0F /* AccessTokenRequest.swift */; };
 		B6E20C8B27987DAF00C0BA0F /* Publisher+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E20C8A27987DAF00C0BA0F /* Publisher+.swift */; };
+		B6E20C8D27988A0600C0BA0F /* KeychainAccess.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E20C8C27988A0500C0BA0F /* KeychainAccess.xcframework */; };
+		B6E20C8E27988A0600C0BA0F /* KeychainAccess.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6E20C8C27988A0500C0BA0F /* KeychainAccess.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B6E20C9127988B5B00C0BA0F /* KeyChainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E20C9027988B5B00C0BA0F /* KeyChainHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +114,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				875C8F022774BE99008F4FA5 /* HeyQiitaCore.framework in Embed Frameworks */,
+				B6E20C8E27988A0600C0BA0F /* KeychainAccess.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,6 +171,8 @@
 		B6E20C7F279860FA00C0BA0F /* ArticleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRequest.swift; sourceTree = "<group>"; };
 		B6E20C82279869AC00C0BA0F /* AccessTokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenRequest.swift; sourceTree = "<group>"; };
 		B6E20C8A27987DAF00C0BA0F /* Publisher+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+.swift"; sourceTree = "<group>"; };
+		B6E20C8C27988A0500C0BA0F /* KeychainAccess.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = KeychainAccess.xcframework; path = Carthage/Build/KeychainAccess.xcframework; sourceTree = "<group>"; };
+		B6E20C9027988B5B00C0BA0F /* KeyChainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				875C8F012774BE99008F4FA5 /* HeyQiitaCore.framework in Frameworks */,
+				B6E20C8D27988A0600C0BA0F /* KeychainAccess.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +236,7 @@
 		875C8EED2774BE99008F4FA5 /* HeyQiitaCore */ = {
 			isa = PBXGroup;
 			children = (
+				B6E20C8F27988B2B00C0BA0F /* KeyChain */,
 				B6BDEB4027984898005B883E /* ViewModels */,
 				B6E20C8827987D8100C0BA0F /* Extensions */,
 				875C8EEE2774BE99008F4FA5 /* HeyQiitaCore.h */,
@@ -320,6 +328,7 @@
 		878832552774C78E00B7FBDB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B6E20C8C27988A0500C0BA0F /* KeychainAccess.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -516,6 +525,14 @@
 				B6E20C8A27987DAF00C0BA0F /* Publisher+.swift */,
 			);
 			path = Publisher;
+			sourceTree = "<group>";
+		};
+		B6E20C8F27988B2B00C0BA0F /* KeyChain */ = {
+			isa = PBXGroup;
+			children = (
+				B6E20C9027988B5B00C0BA0F /* KeyChainHelper.swift */,
+			);
+			path = KeyChain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -793,6 +810,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6E20C8B27987DAF00C0BA0F /* Publisher+.swift in Sources */,
+				B6E20C9127988B5B00C0BA0F /* KeyChainHelper.swift in Sources */,
 				B6BDEB43279848C5005B883E /* LoginViewModel.swift in Sources */,
 				B6BDEB4827984D01005B883E /* AuthWebViewModel.swift in Sources */,
 				875C8EF02774BE99008F4FA5 /* HeyQiitaCore.docc in Sources */,

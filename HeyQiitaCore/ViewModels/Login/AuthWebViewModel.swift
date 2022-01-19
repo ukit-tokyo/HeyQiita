@@ -39,15 +39,13 @@ public class AuthWebViewModel: ObservableObject {
       clientSecret: clientSecret,
       code: code
     )
-    Session.shared.send(AccessTokenRequest(parameter))
-      .sink(
-        onReceivedValue: { value in
-          print(value.token)
-        },
-        onFailure: { error in
-          print(error)
-        }
-      )
+    Session.shared.send(AccessTokenRequest(parameter)).sink(
+      onReceivedValue: { value in
+        KeyChainHelper.shared.accessToken = value.token
+      },
+      onFailure: { error in
+        print(error)
+      })
       .store(in: &cancellables)
   }
 }
