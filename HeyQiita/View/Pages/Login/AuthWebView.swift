@@ -2,7 +2,11 @@ import SwiftUI
 import HeyQiitaCore
 
 struct AuthWebView: View {
-  @ObservedObject var viewModel = AuthWebViewModel()
+  @ObservedObject var viewModel: AuthWebViewModel
+
+  init(didAuthComplete: @escaping () -> Void) {
+    viewModel = AuthWebViewModel(didAuthComplete: didAuthComplete)
+  }
 
   var body: some View {
     WebView(
@@ -17,7 +21,7 @@ struct AuthWebView: View {
 #if DEBUG || STUB
 struct AuthWebView_Previews: PreviewProvider {
   static var previews: some View {
-    AuthWebView()
+    AuthWebView(didAuthComplete: {})
   }
 }
 #endif

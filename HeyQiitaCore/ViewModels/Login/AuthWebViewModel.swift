@@ -4,14 +4,16 @@ import Combine
 public class AuthWebViewModel: ObservableObject {
   private var cancellables: Set<AnyCancellable> = []
 
-  public let authURL: URL
   private let clientID: String
+  private let didAuthComplete: () -> ()
+  public let authURL: URL
 
-  public init() {
+  public init(didAuthComplete: @escaping () -> ()) {
     guard let clientID = Bundle.main.object(forInfoDictionaryKey: "CLIENT_ID") as? String else {
       fatalError("CLIENT_ID was not found.")
     }
     self.clientID = clientID
+    self.didAuthComplete = didAuthComplete
     self.authURL = URL.authURL
       .addQueries([
         URLQueryItem(name: "client_id", value: clientID),
@@ -40,8 +42,9 @@ public class AuthWebViewModel: ObservableObject {
       code: code
     )
     Session.shared.send(AccessTokenRequest(parameter)).sink(
-      onReceivedValue: { value in
+      onReceivedValue: { [weak self] value in
         KeyChainHelper.shared.accessToken = value.token
+        self?.didAuthComplete()
       },
       onFailure: { error in
         print(error)

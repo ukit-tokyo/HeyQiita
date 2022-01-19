@@ -12,11 +12,16 @@ struct LoginView: View {
       HStack(spacing: 20) {
         AppButton(
           title: "Login",
-          action: { viewModel.isAuthWebViewPresented.toggle() })
+          action: { viewModel.isAuthWebViewPresented = true })
           .sheet(
             isPresented: $viewModel.isAuthWebViewPresented,
-            onDismiss: { viewModel.isAuthWebViewPresented.toggle() },
-            content: { AuthWebView() }
+            onDismiss: { viewModel.isAuthWebViewPresented = false },
+            content: {
+              AuthWebView(
+                didAuthComplete: {
+                  viewModel.isAuthWebViewPresented = false
+                })
+            }
           )
 
         TextButton(title: "Skipping", action: {})
