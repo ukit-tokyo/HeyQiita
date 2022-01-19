@@ -32,6 +32,9 @@
 		87B8B722277376020060A5FC /* HeyQiitaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B8B721277376020060A5FC /* HeyQiitaTests.swift */; };
 		87B8B72C277376020060A5FC /* HeyQiitaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B8B72B277376020060A5FC /* HeyQiitaUITests.swift */; };
 		87B8B72E277376020060A5FC /* HeyQiitaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B8B72D277376020060A5FC /* HeyQiitaUITestsLaunchTests.swift */; };
+		B6BDEB39279846F9005B883E /* AuthWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDEB38279846F9005B883E /* AuthWebView.swift */; };
+		B6BDEB3D27984748005B883E /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDEB3C27984748005B883E /* WebView.swift */; };
+		B6BDEB3F27984773005B883E /* WebViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDEB3E27984773005B883E /* WebViewContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +148,9 @@
 		87B8B727277376020060A5FC /* HeyQiitaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeyQiitaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B8B72B277376020060A5FC /* HeyQiitaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyQiitaUITests.swift; sourceTree = "<group>"; };
 		87B8B72D277376020060A5FC /* HeyQiitaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyQiitaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B6BDEB38279846F9005B883E /* AuthWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWebView.swift; sourceTree = "<group>"; };
+		B6BDEB3C27984748005B883E /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		B6BDEB3E27984773005B883E /* WebViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,7 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				87836E5E2789DE6000842C00 /* Atoms */,
-				87836E602789DEA300842C00 /* Templates */,
+				B6BDEB3A2798471C005B883E /* Templates */,
 				87836E612789DEC100842C00 /* Pages */,
 			);
 			path = View;
@@ -257,17 +263,10 @@
 			path = Atoms;
 			sourceTree = "<group>";
 		};
-		87836E602789DEA300842C00 /* Templates */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Templates;
-			sourceTree = "<group>";
-		};
 		87836E612789DEC100842C00 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				87836E6F278A03DA00842C00 /* LoginView.swift */,
+				B6BDEB37279846CF005B883E /* Login */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -378,6 +377,32 @@
 				87B8B72D277376020060A5FC /* HeyQiitaUITestsLaunchTests.swift */,
 			);
 			path = HeyQiitaUITests;
+			sourceTree = "<group>";
+		};
+		B6BDEB37279846CF005B883E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				87836E6F278A03DA00842C00 /* LoginView.swift */,
+				B6BDEB38279846F9005B883E /* AuthWebView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B6BDEB3A2798471C005B883E /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				B6BDEB3B27984738005B883E /* WebView */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		B6BDEB3B27984738005B883E /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				B6BDEB3C27984748005B883E /* WebView.swift */,
+				B6BDEB3E27984773005B883E /* WebViewContainer.swift */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -687,12 +712,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				87836E70278A03DA00842C00 /* LoginView.swift in Sources */,
+				B6BDEB3F27984773005B883E /* WebViewContainer.swift in Sources */,
 				87B8B713277376000060A5FC /* ContentView.swift in Sources */,
 				87836E72278A050D00842C00 /* TextButton.swift in Sources */,
 				87836E6E2789F56E00842C00 /* Color+.swift in Sources */,
 				87B8B711277376000060A5FC /* HeyQiitaApp.swift in Sources */,
 				87836E652789E1FB00842C00 /* AppLogo.swift in Sources */,
+				B6BDEB3D27984748005B883E /* WebView.swift in Sources */,
 				87836E6B2789EC1500842C00 /* AppButton.swift in Sources */,
+				B6BDEB39279846F9005B883E /* AuthWebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
