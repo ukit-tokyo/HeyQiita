@@ -31,12 +31,15 @@
 		87B8B722277376020060A5FC /* HeyQiitaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B8B721277376020060A5FC /* HeyQiitaTests.swift */; };
 		87B8B72C277376020060A5FC /* HeyQiitaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B8B72B277376020060A5FC /* HeyQiitaUITests.swift */; };
 		87B8B72E277376020060A5FC /* HeyQiitaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B8B72D277376020060A5FC /* HeyQiitaUITestsLaunchTests.swift */; };
+		B6BBE36A2798523800A18398 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BBE3692798523800A18398 /* RequestProtocol.swift */; };
+		B6BBE36D279852E700A18398 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BBE36C279852E700A18398 /* Session.swift */; };
 		B6BDEB39279846F9005B883E /* AuthWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDEB38279846F9005B883E /* AuthWebView.swift */; };
 		B6BDEB3D27984748005B883E /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDEB3C27984748005B883E /* WebView.swift */; };
 		B6BDEB3F27984773005B883E /* WebViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDEB3E27984773005B883E /* WebViewContainer.swift */; };
 		B6BDEB43279848C5005B883E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDEB42279848C5005B883E /* LoginViewModel.swift */; };
 		B6BDEB4827984D01005B883E /* AuthWebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDEB4727984D01005B883E /* AuthWebViewModel.swift */; };
 		B6BDEB4B27984D2C005B883E /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDEB4A27984D2C005B883E /* URLs.swift */; };
+		B6E20C80279860FA00C0BA0F /* ArticleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E20C7F279860FA00C0BA0F /* ArticleRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +152,8 @@
 		87B8B727277376020060A5FC /* HeyQiitaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeyQiitaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B8B72B277376020060A5FC /* HeyQiitaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyQiitaUITests.swift; sourceTree = "<group>"; };
 		87B8B72D277376020060A5FC /* HeyQiitaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyQiitaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B6BBE3692798523800A18398 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		B6BBE36C279852E700A18398 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		B6BDEB38279846F9005B883E /* AuthWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWebView.swift; sourceTree = "<group>"; };
 		B6BDEB3C27984748005B883E /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		B6BDEB3E27984773005B883E /* WebViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewContainer.swift; sourceTree = "<group>"; };
@@ -157,6 +162,7 @@
 		B6BDEB4627984B9A005B883E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B6BDEB4727984D01005B883E /* AuthWebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWebViewModel.swift; sourceTree = "<group>"; };
 		B6BDEB4A27984D2C005B883E /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		B6E20C7F279860FA00C0BA0F /* ArticleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +243,8 @@
 		875C8F152774C1FB008F4FA5 /* HeyQiitaNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				B6BBE36B279852D700A18398 /* Session */,
+				B6BBE3672798521E00A18398 /* API */,
 				B6BDEB4927984D1D005B883E /* URLs */,
 				875C8F162774C1FB008F4FA5 /* HeyQiitaNetwork.h */,
 				875C8F172774C1FB008F4FA5 /* HeyQiitaNetwork.docc */,
@@ -388,6 +396,31 @@
 			path = HeyQiitaUITests;
 			sourceTree = "<group>";
 		};
+		B6BBE3672798521E00A18398 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B6BBE3682798522300A18398 /* Requests */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		B6BBE3682798522300A18398 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				B6E20C7E279860E100C0BA0F /* Article */,
+				B6BBE3692798523800A18398 /* RequestProtocol.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		B6BBE36B279852D700A18398 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				B6BBE36C279852E700A18398 /* Session.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
 		B6BDEB37279846CF005B883E /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -445,6 +478,14 @@
 				B6BDEB4A27984D2C005B883E /* URLs.swift */,
 			);
 			path = URLs;
+			sourceTree = "<group>";
+		};
+		B6E20C7E279860E100C0BA0F /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				B6E20C7F279860FA00C0BA0F /* ArticleRequest.swift */,
+			);
+			path = Article;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -739,8 +780,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6BBE36D279852E700A18398 /* Session.swift in Sources */,
+				B6BBE36A2798523800A18398 /* RequestProtocol.swift in Sources */,
 				875C8F182774C1FB008F4FA5 /* HeyQiitaNetwork.docc in Sources */,
 				B6BDEB4B27984D2C005B883E /* URLs.swift in Sources */,
+				B6E20C80279860FA00C0BA0F /* ArticleRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
