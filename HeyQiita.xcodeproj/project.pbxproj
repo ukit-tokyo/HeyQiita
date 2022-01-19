@@ -26,7 +26,6 @@
 		878832572774C78E00B7FBDB /* HeyQiitaNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 875C8F142774C1FB008F4FA5 /* HeyQiitaNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8793CF312773778E00A8AB81 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8793CF302773778E00A8AB81 /* README.md */; };
 		87B8B711277376000060A5FC /* HeyQiitaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B8B710277376000060A5FC /* HeyQiitaApp.swift */; };
-		87B8B713277376000060A5FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B8B712277376000060A5FC /* ContentView.swift */; };
 		87B8B715277376020060A5FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87B8B714277376020060A5FC /* Assets.xcassets */; };
 		87B8B718277376020060A5FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87B8B717277376020060A5FC /* Preview Assets.xcassets */; };
 		87B8B722277376020060A5FC /* HeyQiitaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B8B721277376020060A5FC /* HeyQiitaTests.swift */; };
@@ -36,6 +35,8 @@
 		B6BDEB3D27984748005B883E /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDEB3C27984748005B883E /* WebView.swift */; };
 		B6BDEB3F27984773005B883E /* WebViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDEB3E27984773005B883E /* WebViewContainer.swift */; };
 		B6BDEB43279848C5005B883E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDEB42279848C5005B883E /* LoginViewModel.swift */; };
+		B6BDEB4827984D01005B883E /* AuthWebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDEB4727984D01005B883E /* AuthWebViewModel.swift */; };
+		B6BDEB4B27984D2C005B883E /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDEB4A27984D2C005B883E /* URLs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,7 +142,6 @@
 		8793CF302773778E00A8AB81 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		87B8B70D277376000060A5FC /* HeyQiita.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeyQiita.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B8B710277376000060A5FC /* HeyQiitaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyQiitaApp.swift; sourceTree = "<group>"; };
-		87B8B712277376000060A5FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		87B8B714277376020060A5FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87B8B717277376020060A5FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		87B8B71D277376020060A5FC /* HeyQiitaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeyQiitaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +153,10 @@
 		B6BDEB3C27984748005B883E /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		B6BDEB3E27984773005B883E /* WebViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewContainer.swift; sourceTree = "<group>"; };
 		B6BDEB42279848C5005B883E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		B6BDEB4527984ADB005B883E /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
+		B6BDEB4627984B9A005B883E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B6BDEB4727984D01005B883E /* AuthWebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWebViewModel.swift; sourceTree = "<group>"; };
+		B6BDEB4A27984D2C005B883E /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +237,7 @@
 		875C8F152774C1FB008F4FA5 /* HeyQiitaNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				B6BDEB4927984D1D005B883E /* URLs */,
 				875C8F162774C1FB008F4FA5 /* HeyQiitaNetwork.h */,
 				875C8F172774C1FB008F4FA5 /* HeyQiitaNetwork.docc */,
 			);
@@ -324,6 +329,7 @@
 				87B8B72A277376020060A5FC /* HeyQiitaUITests */,
 				875C8EFB2774BE99008F4FA5 /* HeyQiitaCoreTests */,
 				875C8F232774C1FB008F4FA5 /* HeyQiitaNetworkTests */,
+				B6BDEB4427984AAF005B883E /* Resources */,
 				8793CF2F2773777B00A8AB81 /* Settings */,
 				87B8B70E277376000060A5FC /* Products */,
 				878832552774C78E00B7FBDB /* Frameworks */,
@@ -347,10 +353,10 @@
 		87B8B70F277376000060A5FC /* HeyQiita */ = {
 			isa = PBXGroup;
 			children = (
+				B6BDEB4627984B9A005B883E /* Info.plist */,
 				87B8B710277376000060A5FC /* HeyQiitaApp.swift */,
 				87836E5D2789DDEB00842C00 /* View */,
 				87836E6C2789F53D00842C00 /* Extensions */,
-				87B8B712277376000060A5FC /* ContentView.swift */,
 				87B8B714277376020060A5FC /* Assets.xcassets */,
 				87B8B716277376020060A5FC /* Preview Content */,
 			);
@@ -420,8 +426,25 @@
 			isa = PBXGroup;
 			children = (
 				B6BDEB42279848C5005B883E /* LoginViewModel.swift */,
+				B6BDEB4727984D01005B883E /* AuthWebViewModel.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		B6BDEB4427984AAF005B883E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B6BDEB4527984ADB005B883E /* Secrets.xcconfig */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B6BDEB4927984D1D005B883E /* URLs */ = {
+			isa = PBXGroup;
+			children = (
+				B6BDEB4A27984D2C005B883E /* URLs.swift */,
+			);
+			path = URLs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -699,6 +722,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6BDEB43279848C5005B883E /* LoginViewModel.swift in Sources */,
+				B6BDEB4827984D01005B883E /* AuthWebViewModel.swift in Sources */,
 				875C8EF02774BE99008F4FA5 /* HeyQiitaCore.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -716,6 +740,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				875C8F182774C1FB008F4FA5 /* HeyQiitaNetwork.docc in Sources */,
+				B6BDEB4B27984D2C005B883E /* URLs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -733,7 +758,6 @@
 			files = (
 				87836E70278A03DA00842C00 /* LoginView.swift in Sources */,
 				B6BDEB3F27984773005B883E /* WebViewContainer.swift in Sources */,
-				87B8B713277376000060A5FC /* ContentView.swift in Sources */,
 				87836E72278A050D00842C00 /* TextButton.swift in Sources */,
 				87836E6E2789F56E00842C00 /* Color+.swift in Sources */,
 				87B8B711277376000060A5FC /* HeyQiitaApp.swift in Sources */,
@@ -1050,6 +1074,7 @@
 		875C8F302774C1FB008F4FA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1071,6 +1096,7 @@
 		875C8F312774C1FB008F4FA5 /* Stub */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1092,6 +1118,7 @@
 		875C8F322774C1FB008F4FA5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1112,6 +1139,7 @@
 		};
 		8793CF32277377E500A8AB81 /* Stub */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6BDEB4527984ADB005B883E /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1183,6 +1211,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"HeyQiita/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HeyQiita/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1249,6 +1278,7 @@
 		};
 		87B8B72F277376020060A5FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6BDEB4527984ADB005B883E /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1311,6 +1341,7 @@
 		};
 		87B8B730277376020060A5FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6BDEB4527984ADB005B883E /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1375,6 +1406,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"HeyQiita/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HeyQiita/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1404,6 +1436,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"HeyQiita/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HeyQiita/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

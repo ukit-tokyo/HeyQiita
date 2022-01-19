@@ -1,8 +1,11 @@
 import SwiftUI
+import HeyQiitaCore
 
 struct AuthWebView: View {
+  @ObservedObject var viewModel = AuthWebViewModel()
+
   var body: some View {
-    WebView(url: URL(string: "https://www.google.com")!)
+    WebView(url: viewModel.authURL)
   }
 }
 
