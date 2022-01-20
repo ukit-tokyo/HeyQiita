@@ -31,6 +31,10 @@
 		87B8B722277376020060A5FC /* HeyQiitaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B8B721277376020060A5FC /* HeyQiitaTests.swift */; };
 		87B8B72C277376020060A5FC /* HeyQiitaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B8B72B277376020060A5FC /* HeyQiitaUITests.swift */; };
 		87B8B72E277376020060A5FC /* HeyQiitaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B8B72D277376020060A5FC /* HeyQiitaUITestsLaunchTests.swift */; };
+		B61B38C3279999460032BB8C /* SessionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61B38C2279999460032BB8C /* SessionError.swift */; };
+		B61B38C62799A8230032BB8C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61B38C52799A8230032BB8C /* API.swift */; };
+		B61B38C92799AC9E0032BB8C /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61B38C82799AC9E0032BB8C /* RootViewModel.swift */; };
+		B61B38CC2799B2830032BB8C /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61B38CB2799B2830032BB8C /* RootView.swift */; };
 		B6BBE36A2798523800A18398 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BBE3692798523800A18398 /* RequestProtocol.swift */; };
 		B6BBE36D279852E700A18398 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BBE36C279852E700A18398 /* Session.swift */; };
 		B6BDEB39279846F9005B883E /* AuthWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDEB38279846F9005B883E /* AuthWebView.swift */; };
@@ -158,6 +162,10 @@
 		87B8B727277376020060A5FC /* HeyQiitaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeyQiitaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B8B72B277376020060A5FC /* HeyQiitaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyQiitaUITests.swift; sourceTree = "<group>"; };
 		87B8B72D277376020060A5FC /* HeyQiitaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyQiitaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B61B38C2279999460032BB8C /* SessionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionError.swift; sourceTree = "<group>"; };
+		B61B38C52799A8230032BB8C /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		B61B38C82799AC9E0032BB8C /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		B61B38CB2799B2830032BB8C /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		B6BBE3692798523800A18398 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 		B6BBE36C279852E700A18398 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		B6BDEB38279846F9005B883E /* AuthWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWebView.swift; sourceTree = "<group>"; };
@@ -236,8 +244,9 @@
 		875C8EED2774BE99008F4FA5 /* HeyQiitaCore */ = {
 			isa = PBXGroup;
 			children = (
-				B6E20C8F27988B2B00C0BA0F /* KeyChain */,
+				B61B38C42799A8080032BB8C /* API */,
 				B6BDEB4027984898005B883E /* ViewModels */,
+				B6E20C8F27988B2B00C0BA0F /* KeyChain */,
 				B6E20C8827987D8100C0BA0F /* Extensions */,
 				875C8EEE2774BE99008F4FA5 /* HeyQiitaCore.h */,
 				875C8EEF2774BE99008F4FA5 /* HeyQiitaCore.docc */,
@@ -256,7 +265,6 @@
 		875C8F152774C1FB008F4FA5 /* HeyQiitaNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				B6BBE36B279852D700A18398 /* Session */,
 				B6BBE3672798521E00A18398 /* API */,
 				B6BDEB4927984D1D005B883E /* URLs */,
 				875C8F162774C1FB008F4FA5 /* HeyQiitaNetwork.h */,
@@ -295,6 +303,7 @@
 		87836E612789DEC100842C00 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				B61B38CA2799B2760032BB8C /* Root */,
 				B6BDEB37279846CF005B883E /* Login */,
 			);
 			path = Pages;
@@ -410,9 +419,34 @@
 			path = HeyQiitaUITests;
 			sourceTree = "<group>";
 		};
+		B61B38C42799A8080032BB8C /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B61B38C52799A8230032BB8C /* API.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		B61B38C72799AC890032BB8C /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				B61B38C82799AC9E0032BB8C /* RootViewModel.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		B61B38CA2799B2760032BB8C /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				B61B38CB2799B2830032BB8C /* RootView.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		B6BBE3672798521E00A18398 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				B6BBE36B279852D700A18398 /* Session */,
 				B6BBE3682798522300A18398 /* Requests */,
 			);
 			path = API;
@@ -432,6 +466,7 @@
 			isa = PBXGroup;
 			children = (
 				B6BBE36C279852E700A18398 /* Session.swift */,
+				B61B38C2279999460032BB8C /* SessionError.swift */,
 			);
 			path = Session;
 			sourceTree = "<group>";
@@ -465,6 +500,7 @@
 		B6BDEB4027984898005B883E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B61B38C72799AC890032BB8C /* Root */,
 				B6BDEB41279848AB005B883E /* Login */,
 			);
 			path = ViewModels;
@@ -811,8 +847,10 @@
 			files = (
 				B6E20C8B27987DAF00C0BA0F /* Publisher+.swift in Sources */,
 				B6E20C9127988B5B00C0BA0F /* KeyChainHelper.swift in Sources */,
+				B61B38C92799AC9E0032BB8C /* RootViewModel.swift in Sources */,
 				B6BDEB43279848C5005B883E /* LoginViewModel.swift in Sources */,
 				B6BDEB4827984D01005B883E /* AuthWebViewModel.swift in Sources */,
+				B61B38C62799A8230032BB8C /* API.swift in Sources */,
 				875C8EF02774BE99008F4FA5 /* HeyQiitaCore.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -835,6 +873,7 @@
 				B6E20C83279869AC00C0BA0F /* AccessTokenRequest.swift in Sources */,
 				B6BDEB4B27984D2C005B883E /* URLs.swift in Sources */,
 				B6E20C80279860FA00C0BA0F /* ArticleRequest.swift in Sources */,
+				B61B38C3279999460032BB8C /* SessionError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -854,6 +893,7 @@
 				B6BDEB3F27984773005B883E /* WebViewContainer.swift in Sources */,
 				87836E72278A050D00842C00 /* TextButton.swift in Sources */,
 				87836E6E2789F56E00842C00 /* Color+.swift in Sources */,
+				B61B38CC2799B2830032BB8C /* RootView.swift in Sources */,
 				87B8B711277376000060A5FC /* HeyQiitaApp.swift in Sources */,
 				87836E652789E1FB00842C00 /* AppLogo.swift in Sources */,
 				B6BDEB3D27984748005B883E /* WebView.swift in Sources */,

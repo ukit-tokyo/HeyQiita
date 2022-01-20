@@ -7,20 +7,37 @@ public struct Session {
   private init() {}
 
   public func send<Request: RequestProtocol, Response>(_ request: Request)
-    -> AnyPublisher<Response, Error> where Request.Response == Response
+    -> AnyPublisher<Response, SessionError> where Request.Response == Response
   {
     let req = makeRequest(with: request)
     let decorder = JSONDecoder()
     decorder.keyDecodingStrategy = .convertFromSnakeCase
 
     return URLSession.shared.dataTaskPublisher(for: req)
-      .receive(on: DispatchQueue.main)
+      .timeout(.seconds(10), scheduler: DispatchQueue.main)
+      .retry(2)
       .tryMap { (data, response) in
-        print(String(data: data, encoding: .utf8))
-        // TODO: エラーハンドリング
+        // print network results
+        dump(with: data, request: request, response: response)
+
+        guard let response = response as? HTTPURLResponse,
+              200 ..< 300 ~= response.statusCode else {
+          throw SessionError(with: data, decoder: decorder)
+        }
         return data
       }
       .decode(type: Response.self, decoder: decorder)
+      .mapError { error in
+        switch error {
+        case let error as SessionError:
+          return error
+        case _ as DecodingError:
+          return SessionError.decodingFailure
+        default:
+          return SessionError.unknown
+        }
+      }
+      .receive(on: DispatchQueue.main)
       .eraseToAnyPublisher()
   }
 }
@@ -55,6 +72,23 @@ extension Session {
     }
 
     return req
+  }
+
+  private func dump<Request: RequestProtocol>(with data: Data, request: Request, response: URLResponse) {
+    #if DEBUG || STUB
+    let dump: String = """
+
+    ====✅ API RESULT ✅=====
+    path: \(request.endpoint)
+    param: \(request.parameters ?? [:])
+    header: \(request.headers ?? [:])
+    status: \((response as? HTTPURLResponse)?.statusCode ?? 0)
+    response: \(String(data: data, encoding: .utf8) ?? "")
+    =========================
+
+    """
+    print(dump)
+    #endif
   }
 }
 

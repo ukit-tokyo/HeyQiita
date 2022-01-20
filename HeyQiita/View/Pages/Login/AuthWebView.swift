@@ -12,8 +12,7 @@ struct AuthWebView: View {
     WebView(
       url: viewModel.authURL,
       willLoad: { url in
-        print("testing...", url)
-        return viewModel.hookAuthCodeFromTargetURL(url: url)
+        viewModel.hookAuthCodeFromTargetURL(url: url)
       })
   }
 }
