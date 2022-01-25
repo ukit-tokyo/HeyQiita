@@ -6,7 +6,13 @@ struct RootView: View {
   @ObservedObject private var viewModel = RootViewModel.shared
 
   var body: some View {
-    LoginView()
+    if viewModel.isLoginChecked {
+      HomeView()
+        .transition(.opacity)
+    } else {
+      LoginView()
+        .transition(.opacity)
+    }
       /*
       .alert(
         "Network Error",

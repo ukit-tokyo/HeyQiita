@@ -20,6 +20,7 @@ struct LoginView: View {
               AuthWebView(
                 didAuthComplete: {
                   viewModel.isAuthWebViewPresented = false
+                  viewModel.setAuthCompleted()
                 })
             }
           )

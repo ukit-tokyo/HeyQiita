@@ -23,7 +23,7 @@ public struct AccessTokenRequest: RequestProtocol {
     [
       "client_id": param.clientID,
       "client_secret": param.clientSecret,
-      "cod": param.code,
+      "code": param.code,
     ]
   }
 
