@@ -44,6 +44,7 @@
 		B6BDEB4827984D01005B883E /* AuthWebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDEB4727984D01005B883E /* AuthWebViewModel.swift */; };
 		B6BDEB4B27984D2C005B883E /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDEB4A27984D2C005B883E /* URLs.swift */; };
 		B6C4AAEF27A024BE00B60903 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4AAEE27A024BE00B60903 /* HomeView.swift */; };
+		B6C4AAF227A03C6600B60903 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4AAF127A03C6600B60903 /* UserDefaultsHelper.swift */; };
 		B6E20C80279860FA00C0BA0F /* ArticleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E20C7F279860FA00C0BA0F /* ArticleRequest.swift */; };
 		B6E20C83279869AC00C0BA0F /* AccessTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E20C82279869AC00C0BA0F /* AccessTokenRequest.swift */; };
 		B6E20C8B27987DAF00C0BA0F /* Publisher+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E20C8A27987DAF00C0BA0F /* Publisher+.swift */; };
@@ -178,6 +179,7 @@
 		B6BDEB4727984D01005B883E /* AuthWebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWebViewModel.swift; sourceTree = "<group>"; };
 		B6BDEB4A27984D2C005B883E /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		B6C4AAEE27A024BE00B60903 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B6C4AAF127A03C6600B60903 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		B6E20C7F279860FA00C0BA0F /* ArticleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRequest.swift; sourceTree = "<group>"; };
 		B6E20C82279869AC00C0BA0F /* AccessTokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenRequest.swift; sourceTree = "<group>"; };
 		B6E20C8A27987DAF00C0BA0F /* Publisher+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+.swift"; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				B61B38C42799A8080032BB8C /* API */,
 				B6BDEB4027984898005B883E /* ViewModels */,
 				B6E20C8F27988B2B00C0BA0F /* KeyChain */,
+				B6C4AAF027A03C4E00B60903 /* UserDefaults */,
 				B6E20C8827987D8100C0BA0F /* Extensions */,
 				875C8EEE2774BE99008F4FA5 /* HeyQiitaCore.h */,
 				875C8EEF2774BE99008F4FA5 /* HeyQiitaCore.docc */,
@@ -540,6 +543,14 @@
 				B6C4AAEE27A024BE00B60903 /* HomeView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		B6C4AAF027A03C4E00B60903 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				B6C4AAF127A03C6600B60903 /* UserDefaultsHelper.swift */,
+			);
+			path = UserDefaults;
 			sourceTree = "<group>";
 		};
 		B6E20C7E279860E100C0BA0F /* Article */ = {
@@ -858,6 +869,7 @@
 			files = (
 				B6E20C8B27987DAF00C0BA0F /* Publisher+.swift in Sources */,
 				B6E20C9127988B5B00C0BA0F /* KeyChainHelper.swift in Sources */,
+				B6C4AAF227A03C6600B60903 /* UserDefaultsHelper.swift in Sources */,
 				B61B38C92799AC9E0032BB8C /* RootViewModel.swift in Sources */,
 				B6BDEB43279848C5005B883E /* LoginViewModel.swift in Sources */,
 				B6BDEB4827984D01005B883E /* AuthWebViewModel.swift in Sources */,

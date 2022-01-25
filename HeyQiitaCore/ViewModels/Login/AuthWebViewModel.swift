@@ -5,10 +5,10 @@ public class AuthWebViewModel: ObservableObject {
   private var cancellables: Set<AnyCancellable> = []
 
   private let clientID: String
-  private let didAuthComplete: () -> ()
+  private let didAuthComplete: (String) -> ()
   public let authURL: URL
 
-  public init(didAuthComplete: @escaping () -> ()) {
+  public init(didAuthComplete: @escaping (String) -> ()) {
     guard let clientID = Bundle.main.object(forInfoDictionaryKey: "CLIENT_ID") as? String else {
       fatalError("CLIENT_ID was not found.")
     }
@@ -44,8 +44,7 @@ public class AuthWebViewModel: ObservableObject {
 
     API.shared.send(AccessTokenRequest(parameter))
       .sink { [weak self] value in
-        KeyChainHelper.shared.accessToken = value.token
-        self?.didAuthComplete()
+        self?.didAuthComplete(value.token)
       }
       .store(in: &cancellables)
     }

@@ -40,16 +40,14 @@ extension RootViewModel {
     }
   }
 
-  public class UserStatus {
+  public struct UserStatus {
     /// 認証済みフラグ
     public var isAuthenticated: Bool {
       KeyChainHelper.shared.accessToken != nil
     }
     /// ログインをスキップ中か
-    @Published public var isLoginPending: Bool = false
-
-    public init(isLoginPending: Bool = false) {
-      self.isLoginPending = isLoginPending
+    public var isLoginPending: Bool {
+      UserDefaultsHelper.shared.isLoginPending
     }
   }
 }

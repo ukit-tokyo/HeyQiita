@@ -8,10 +8,8 @@ struct RootView: View {
   var body: some View {
     if viewModel.isLoginChecked {
       HomeView()
-        .transition(.opacity)
     } else {
       LoginView()
-        .transition(.opacity)
     }
       /*
       .alert(

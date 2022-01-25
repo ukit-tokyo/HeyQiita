@@ -4,7 +4,7 @@ import HeyQiitaCore
 struct AuthWebView: View {
   @ObservedObject var viewModel: AuthWebViewModel
 
-  init(didAuthComplete: @escaping () -> Void) {
+  init(didAuthComplete: @escaping (String) -> Void) {
     viewModel = AuthWebViewModel(didAuthComplete: didAuthComplete)
   }
 
@@ -20,7 +20,7 @@ struct AuthWebView: View {
 #if DEBUG || STUB
 struct AuthWebView_Previews: PreviewProvider {
   static var previews: some View {
-    AuthWebView(didAuthComplete: {})
+    AuthWebView(didAuthComplete: { _ in })
   }
 }
 #endif

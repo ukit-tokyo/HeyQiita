@@ -3,7 +3,13 @@ public class LoginViewModel: ObservableObject {
 
   public init() {}
 
-  public func setAuthCompleted() {
+  public func set(accessToken: String) {
+    KeyChainHelper.shared.accessToken = accessToken
+    RootViewModel.shared.update(userStatus: .init())
+  }
+
+  public func setLoginSkipped() {
+    UserDefaultsHelper.shared.isLoginPending = true
     RootViewModel.shared.update(userStatus: .init())
   }
 }

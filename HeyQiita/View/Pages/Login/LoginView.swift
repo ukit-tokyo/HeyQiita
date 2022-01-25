@@ -18,14 +18,16 @@ struct LoginView: View {
             onDismiss: { viewModel.isAuthWebViewPresented = false },
             content: {
               AuthWebView(
-                didAuthComplete: {
+                didAuthComplete: { accessToken in
                   viewModel.isAuthWebViewPresented = false
-                  viewModel.setAuthCompleted()
+                  viewModel.set(accessToken: accessToken)
                 })
             }
           )
 
-        TextButton(title: "Skipping", action: {})
+        TextButton(
+          title: "Skipping",
+          action: { viewModel.setLoginSkipped() })
       }
     }
   }
